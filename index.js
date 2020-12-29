@@ -10,9 +10,9 @@ app.set("view engine","ejs");
 
 //app.use('/examples',express.static('public'));
 
-app.get('/auth/api/v1/Login', function (req, res) {
-    console.log(req.headers)
-    if (req.headers.password && req.headers.login){
+app.post('/auth/api/v1/Login', function (req, res) {
+    console.log(req.body)
+    if (req.body.password && req.body.username){
         res.json({
             "message": "Login successfully by atlasdelivery.io",
             "sessionId": "e06a971e78c7456d88d2b9e5f29ef559fcf7bd20403a4a36bf9bec28b090c05a"
